@@ -86,12 +86,13 @@ WSGI_APPLICATION = 'taskpy_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 DATABASES = {
-    'default': dj_database_url.config(
-        default="sqlite://PATH[3]",
-        conn_max_age=600
-    )
-    
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, '../db.sqlite3'),
+    }
 }
 
 
