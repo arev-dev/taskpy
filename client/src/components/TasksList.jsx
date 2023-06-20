@@ -20,10 +20,13 @@ function TasksList() {
             </div>
         ://flex flex-col
         <div className="flex flex-col p-6 md:grid grid-cols-3 gap-1">
-            {tasks?.map(t=>(
-            <TaskCard task={t} key={t.id}/>
-        ))}
+        {tasks
+            ?.sort((a, b) => (a.Done === b.Done ? 0 : a.Done ? 1 : -1)) // Ordenar por Done (False primero, luego True)
+            .map((t) => (
+            <TaskCard task={t} key={t.id} task_data={t} />
+            ))}
         </div>
+
         }
     </div>
     
