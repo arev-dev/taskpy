@@ -12,7 +12,7 @@ function TasksPage() {
             top-7
             right-6
             md:top-8 mb-4 
-            lg:w-32 h-24
+            lg:text-xl
             bg-amber-500
             text-zinc-100 
             hover:bg-blue-700

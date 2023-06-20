@@ -5,12 +5,12 @@ export default function TaskCard({task}) {
   var styles = () =>{
     if (task.Done){
       return {
-        title: "font-bold uppercase text-lg line-through text-zinc-500",
+        title: "font-bold uppercase text-lg line-through text-zinc-500 max-w-[900px] truncate",
         done: 'font-bold text-green-600',
       }
     }else{
       return {
-        title: "font-bold uppercase text-lg",
+        title: "font-bold uppercase text-lg max-w-[900px] truncate",
         done: 'font-bold text-amber-600',
       }
     }

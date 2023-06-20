@@ -56,7 +56,7 @@ function TaskEditFormPage() {
   }, [])
 
   return (
-    <div className="bg-neutral-800 rounded-lg p-6 max-w-xl mx-auto">
+    <div className="bg-neutral-800 rounded-lg p-6 max-w-xl m-12 sm:mx-auto">
       <form className=""  onSubmit={onSubmit}>
         
         <input className={styles.inputs} type="text" placeholder="Título de la Tarea"
